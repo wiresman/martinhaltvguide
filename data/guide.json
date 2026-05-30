@@ -1,0 +1,5 @@
+{
+  "generated": null,
+  "note": "Real EPG data goes here, keyed by channel id. Populated by the GitHub Actions pipeline. While empty, the app synthesises a live demo schedule. See README.",
+  "channels": {}
+}
