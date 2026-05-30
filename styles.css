@@ -1,0 +1,345 @@
+/* ------------------------------------------------------------------ *
+ * TV Guide — clean, Apple-style "Now & Next"
+ * System font stack, soft greys, rounded cards, blue accent.
+ * Light + dark mode via prefers-color-scheme.
+ * ------------------------------------------------------------------ */
+
+:root {
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --surface-2: #f0f0f3;
+  --text: #1d1d1f;
+  --text-2: #6e6e73;
+  --text-3: #8e8e93;
+  --line: rgba(0, 0, 0, 0.08);
+  --accent: #0a84ff;
+  --accent-soft: rgba(10, 132, 255, 0.12);
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.05);
+  --radius: 18px;
+  --radius-sm: 12px;
+  --blur: saturate(180%) blur(20px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --surface: #1c1c1e;
+    --surface-2: #2c2c2e;
+    --text: #f5f5f7;
+    --text-2: #aeaeb2;
+    --text-3: #8e8e93;
+    --line: rgba(255, 255, 255, 0.1);
+    --accent: #0a84ff;
+    --accent-soft: rgba(10, 132, 255, 0.22);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.45;
+}
+
+/* ----------------------------- Top bar ---------------------------- */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+  border-bottom: 1px solid var(--line);
+}
+
+.topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand h1 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.badge.live {
+  color: #fff;
+  background: #34c759;
+  border-color: transparent;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.clock {
+  font-variant-numeric: tabular-nums;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-2);
+  letter-spacing: -0.01em;
+}
+
+.search {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 15px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  width: 200px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, width 0.2s ease;
+}
+
+.search::placeholder {
+  color: var(--text-3);
+}
+
+.search:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+/* ------------------------------ Guide ----------------------------- */
+
+.guide {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 8px 22px 48px;
+}
+
+.group {
+  margin-top: 34px;
+}
+
+.group-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin: 0 0 14px 4px;
+}
+
+.channel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 14px;
+}
+
+/* --------------------------- Channel card ------------------------- */
+
+.channel-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.channel-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08), 0 16px 38px rgba(0, 0, 0, 0.09);
+}
+
+.channel-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.channel-meta {
+  min-width: 0;
+}
+
+.channel-name {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.channel-group {
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+/* ------------------------------ Slots ----------------------------- */
+
+.slots {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.slot {
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+
+.slot.now {
+  background: var(--accent-soft);
+}
+
+.slot.next {
+  background: var(--surface-2);
+}
+
+.slot-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-3);
+  margin-bottom: 4px;
+}
+
+.slot.now .slot-label {
+  color: var(--accent);
+}
+
+.slot-title {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.slot-title.muted {
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+.slot-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 3px;
+}
+
+.slot-time {
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-2);
+  font-weight: 500;
+}
+
+.slot-remaining {
+  font-size: 12px;
+  color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.slot-desc {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--text-2);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.progress {
+  margin-top: 10px;
+  height: 5px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+  transition: width 0.4s ease;
+}
+
+/* ------------------------------ Footer ---------------------------- */
+
+.footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 22px 40px;
+  color: var(--text-3);
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 540px) {
+  .channel-grid {
+    grid-template-columns: 1fr;
+  }
+  .search {
+    width: 150px;
+  }
+  .topbar-inner {
+    padding: 12px 16px;
+  }
+  .guide {
+    padding: 8px 16px 40px;
+  }
+}

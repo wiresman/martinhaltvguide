@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Channel list for the iptv-org/epg grabber.
+
+  HOW TO FILL THIS IN
+  -------------------
+  Each <channel> needs three things from the iptv-org channel database:
+    site      - which guide source to scrape (the name of a folder in
+                iptv-org/epg's `sites/` directory, e.g. "ontvtonight.com")
+    site_id   - that source's own id for the channel
+    xmltv_id  - the iptv-org channel id; this MUST match the `epgId` value
+                in data/channels.js for the programme data to be picked up.
+
+  Browse channels + their ids at https://iptv-org.github.io/ and the list of
+  supported sites at https://github.com/iptv-org/epg/tree/master/sites .
+
+  Only the UK channels below have an `epgId` set in data/channels.js, so they
+  are the ones wired up; fill in real `site` / `site_id` values for each.
+  Add more <channel> lines (and matching epgId values) as you confirm sources.
+  Any channel without working data is simply synthesised by the site instead.
+-->
+<channels>
+  <channel site="REPLACE_ME" lang="en" xmltv_id="BBCOne.uk"     site_id="REPLACE_ME">BBC One</channel>
+  <channel site="REPLACE_ME" lang="en" xmltv_id="BBCTwo.uk"     site_id="REPLACE_ME">BBC Two</channel>
+  <channel site="REPLACE_ME" lang="en" xmltv_id="BBCNews.uk"    site_id="REPLACE_ME">BBC News</channel>
+  <channel site="REPLACE_ME" lang="en" xmltv_id="ITV1.uk"       site_id="REPLACE_ME">ITV</channel>
+  <channel site="REPLACE_ME" lang="en" xmltv_id="ITV4.uk"       site_id="REPLACE_ME">ITV4</channel>
+  <channel site="REPLACE_ME" lang="en" xmltv_id="Channel4.uk"   site_id="REPLACE_ME">Channel 4</channel>
+  <channel site="REPLACE_ME" lang="en" xmltv_id="Channel5.uk"   site_id="REPLACE_ME">5</channel>
+  <channel site="REPLACE_ME" lang="en" xmltv_id="SkyNews.uk"    site_id="REPLACE_ME">Sky News</channel>
+  <channel site="REPLACE_ME" lang="en" xmltv_id="SkyShowcase.uk" site_id="REPLACE_ME">Sky Showcase</channel>
+</channels>
