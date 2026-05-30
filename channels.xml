@@ -2,64 +2,50 @@
 <!--
   Channel list for the iptv-org/epg grabber (https://github.com/iptv-org/epg).
 
+  IMPORTANT: this fetch CANNOT run in the Claude sandbox (no outbound network);
+  it runs in GitHub Actions via .github/workflows/epg.yml.
+
   HOW IT WORKS
   ------------
-  Each <channel> needs three things:
-    site      - which guide source to scrape (a folder name in iptv-org/epg's
-                `sites/` directory, e.g. "freeview.co.uk" or "player.ee.co.uk")
-    site_id   - that source's own id for the channel (taken from the site's
-                committed <site>.channels.xml in iptv-org/epg)
-    xmltv_id  - this MUST match the `epgId` value in data/channels.js so the
-                converter (scripts/xmltv-to-guide.mjs) can attach the listings.
+  Each <channel> needs:
+    site      - a folder name under the grabber's `sites/` directory
+    site_id   - that source's own id for the channel
+    xmltv_id  - MUST match the `epgId` in data/channels.js so the converter
+                (scripts/xmltv-to-guide.mjs) attaches the listings to the card.
 
-  Browse channels + ids at https://iptv-org.github.io/ and the supported sites
-  at https://github.com/iptv-org/epg/tree/master/sites .
+  ONLY VERIFIED CHANNELS ARE LISTED HERE.
+  Every site_id below was taken from the grabber's own committed channel catalog
+  (sites/freeview.co.uk/freeview.co.uk.channels.xml and
+   sites/player.ee.co.uk/player.ee.co.uk.channels.xml), so the IDs are real.
+  (Whether each returns data on a given day can only be confirmed by an actual
+  online grab.) Channels in data/channels.js WITHOUT a line here have no verified
+  free UK source and are left to the app's synthetic schedule - that currently
+  includes Sky Showcase, Disney Junior/Channel, BabyTV, CNN, Al Jazeera, CNBC,
+  Bloomberg, Nat Geo / Nat Geo Wild, Travel, E!, AMC, Syfy, the AXN and Star
+  feeds, Hollywood and MTV Live.
 
-  SOURCES USED HERE (both UK guides, so times are UK local / correct):
-    freeview.co.uk    - UK terrestrial channels (BBC One/Two/News, ITV, ITV4,
-                        Channel 4). site_id is "nid#sid" from Freeview's API.
-    player.ee.co.uk   - EE TV's UK guide; everything else below.
-
-  Every channel in this file was verified to return real <programme> data from
-  the grabber (run 2026-05-30). Channels in data/channels.js without a line
-  here -- Channel 5, the AXN / Star / Hollywood / AMC* / MTV Live feeds -- have
-  no working public UK source in iptv-org and fall back to the app's synthetic
-  schedule. (* AMC is not listed by either source above.)
-
-  Grab with:
+  Grab (in CI):
     npm run grab -- --channels=ABS/channels.xml --output=ABS/guide.xml --days=2
   then convert:
     node scripts/xmltv-to-guide.mjs ABS/guide.xml data/guide.json
 -->
 <channels>
-  <!-- UK terrestrial via freeview.co.uk (site_id = "nid#sid") -->
+  <!-- UK terrestrial via freeview.co.uk (region: London; UK timezone) -->
   <channel site="freeview.co.uk" lang="en" xmltv_id="BBCOne.uk" site_id="64257#4164">BBC One</channel>
   <channel site="freeview.co.uk" lang="en" xmltv_id="BBCTwo.uk" site_id="64257#4287">BBC Two</channel>
   <channel site="freeview.co.uk" lang="en" xmltv_id="BBCNews.uk" site_id="64257#4352">BBC News</channel>
   <channel site="freeview.co.uk" lang="en" xmltv_id="ITV1.uk" site_id="64257#8261">ITV</channel>
   <channel site="freeview.co.uk" lang="en" xmltv_id="ITV4.uk" site_id="64257#8330">ITV4</channel>
   <channel site="freeview.co.uk" lang="en" xmltv_id="Channel4.uk" site_id="64257#8384">Channel 4</channel>
-  <!-- Everything else via player.ee.co.uk (EE TV, UK guide) -->
-  <channel site="player.ee.co.uk" lang="en" xmltv_id="SkyShowcase.uk" site_id="dvb://233a..4440">Sky Showcase</channel>
-  <channel site="player.ee.co.uk" lang="en" xmltv_id="SkyNews.uk" site_id="http://bds.tv/services/BT_93_1404_SD">Sky News</channel>
+  <channel site="freeview.co.uk" lang="en" xmltv_id="Channel5.uk" site_id="64257#8500">Channel 5</channel>
+  <!-- Via player.ee.co.uk (EE TV UK guide; UK timezone) -->
+  <channel site="player.ee.co.uk" lang="en" xmltv_id="SkyNews.uk" site_id="dvb://233a..5640">Sky News</channel>
   <channel site="player.ee.co.uk" lang="en" xmltv_id="CBeebies.uk" site_id="dvb://233a..1240">CBeebies</channel>
   <channel site="player.ee.co.uk" lang="en" xmltv_id="CBBC.uk" site_id="dvb://233a..1200">CBBC</channel>
-  <channel site="player.ee.co.uk" lang="en" xmltv_id="DisneyJunior.uk" site_id="dvb://233a..71a0">Disney Junior</channel>
-  <channel site="player.ee.co.uk" lang="en" xmltv_id="DisneyChannel.uk" site_id="dvb://233a..5640">Disney Channel</channel>
-  <channel site="player.ee.co.uk" lang="en" xmltv_id="NickJr.uk" site_id="http://bds.tv/services/BT_154160_1840_SD">Nick Jr.</channel>
+  <channel site="player.ee.co.uk" lang="en" xmltv_id="NickJr.uk" site_id="http://bds.tv/services/BT_750608_1857_SD">Nick Jr.</channel>
   <channel site="player.ee.co.uk" lang="en" xmltv_id="Nickelodeon.uk" site_id="http://bds.tv/services/BT_154274_1846_SD">Nickelodeon</channel>
   <channel site="player.ee.co.uk" lang="en" xmltv_id="CartoonNetwork.uk" site_id="http://bds.tv/services/BT_157644_5601_SD">Cartoon Network</channel>
-  <channel site="player.ee.co.uk" lang="en" xmltv_id="BabyTV.uk" site_id="dvb://233a..7460">BabyTV</channel>
-  <channel site="player.ee.co.uk" lang="en" xmltv_id="CNN.uk" site_id="dvb://233a..7780">CNN</channel>
-  <channel site="player.ee.co.uk" lang="en" xmltv_id="AlJazeera.uk" site_id="dvb://233a..7e40">Al Jazeera</channel>
-  <channel site="player.ee.co.uk" lang="en" xmltv_id="CNBC.uk" site_id="dvb://233a..7a60">CNBC</channel>
-  <channel site="player.ee.co.uk" lang="en" xmltv_id="Bloomberg.uk" site_id="dvb://233a..7920">Bloomberg</channel>
   <channel site="player.ee.co.uk" lang="en" xmltv_id="Discovery.uk" site_id="http://bds.tv/services/BT_608791">Discovery</channel>
-  <channel site="player.ee.co.uk" lang="en" xmltv_id="NationalGeographic.uk" site_id="dvb://233a..6360">National Geographic</channel>
-  <channel site="player.ee.co.uk" lang="en" xmltv_id="NatGeoWild.uk" site_id="dvb://233a..7040">Nat Geo Wild</channel>
-  <channel site="player.ee.co.uk" lang="en" xmltv_id="TravelChannel.uk" site_id="dvb://233a..69a0">Travel Channel</channel>
   <channel site="player.ee.co.uk" lang="en" xmltv_id="TLC.uk" site_id="dvb://233a..6d60">TLC</channel>
-  <channel site="player.ee.co.uk" lang="en" xmltv_id="EEntertainment.uk" site_id="http://bds.tv/services/BT_57003_2310_SD">E! Entertainment</channel>
-  <channel site="player.ee.co.uk" lang="en" xmltv_id="Syfy.uk" site_id="dvb://233a..58e0">Syfy</channel>
   <channel site="player.ee.co.uk" lang="en" xmltv_id="MTV.uk" site_id="http://bds.tv/services/BT_57005_2501_SD">MTV</channel>
 </channels>
