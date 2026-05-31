@@ -26,8 +26,8 @@ export const GROUPS = [
       { id: 'channel-4',   name: 'Channel 4',   color: '#1a1a1a', epgId: 'Channel4.uk' },
       { id: 'five-hd',     name: '5 HD',        color: '#7b2ff7', epgId: 'Channel5.uk' },
       { id: 'sky-news',    name: 'Sky News',    color: '#c8102e', epgId: 'SkyNews.uk' },
-      // Sky One / Sky Showcase: no verified free source -> synthesised.
-      { id: 'sky-one',     name: 'Sky One',     color: '#0072c6' },
+      // "Sky One" was rebranded to Sky Max in 2021; wired to that feed.
+      { id: 'sky-one',     name: 'Sky One',     color: '#0072c6', epgId: 'SkyMax.uk' },
     ],
   },
   {
