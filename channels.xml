@@ -19,9 +19,9 @@
   (Whether each returns data on a given day can only be confirmed by an actual
   online grab.) Channels in data/channels.js without a line here have no verified
   free UK source and are left to the app's synthetic schedule; that currently
-  includes Sky Showcase, Disney Junior/Channel, BabyTV, CNN, Al Jazeera, CNBC,
-  Bloomberg, Nat Geo / Nat Geo Wild, Travel, E!, AMC, Syfy, the AXN and Star
-  feeds, Hollywood and MTV Live.
+  includes Disney Junior/Channel, BabyTV, CNN, Al Jazeera, CNBC, Bloomberg,
+  Nat Geo / Nat Geo Wild, Travel, E!, AMC, Syfy, the AXN and Star feeds,
+  Hollywood and MTV Live.
 
   The workflow grabs into guide.xml then runs scripts/xmltv-to-guide.mjs to
   produce data/guide.json. See .github/workflows/epg.yml for the exact commands.
@@ -37,6 +37,7 @@
   <channel site="freeview.co.uk" lang="en" xmltv_id="Channel5.uk" site_id="64257#8500">Channel 5</channel>
   <!-- Via player.ee.co.uk (EE TV UK guide; UK timezone) -->
   <channel site="player.ee.co.uk" lang="en" xmltv_id="SkyNews.uk" site_id="dvb://233a..5640">Sky News</channel>
+  <channel site="player.ee.co.uk" lang="en" xmltv_id="SkyMax.uk" site_id="http://bds.tv/services/BT_255_1402_SD">Sky One (now Sky Max)</channel>
   <channel site="player.ee.co.uk" lang="en" xmltv_id="CBeebies.uk" site_id="dvb://233a..1240">CBeebies</channel>
   <channel site="player.ee.co.uk" lang="en" xmltv_id="CBBC.uk" site_id="dvb://233a..1200">CBBC</channel>
   <channel site="player.ee.co.uk" lang="en" xmltv_id="NickJr.uk" site_id="http://bds.tv/services/BT_750608_1857_SD">Nick Jr.</channel>
