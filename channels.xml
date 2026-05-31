@@ -2,15 +2,14 @@
 <!--
   Channel list for the iptv-org/epg grabber (https://github.com/iptv-org/epg).
 
-  IMPORTANT: this fetch CANNOT run in the Claude sandbox (no outbound network);
-  it runs in GitHub Actions via .github/workflows/epg.yml.
+  NOTE: this fetch runs in GitHub Actions via .github/workflows/epg.yml, not
+  in the Claude sandbox (which has no outbound network).
 
-  HOW IT WORKS
-  ------------
-  Each <channel> needs:
-    site      - a folder name under the grabber's `sites/` directory
-    site_id   - that source's own id for the channel
-    xmltv_id  - MUST match the `epgId` in data/channels.js so the converter
+  HOW IT WORKS.
+  Each channel needs:
+    site      = a folder name under the grabber's `sites/` directory
+    site_id   = that source's own id for the channel
+    xmltv_id  = MUST match the `epgId` in data/channels.js so the converter
                 (scripts/xmltv-to-guide.mjs) attaches the listings to the card.
 
   ONLY VERIFIED CHANNELS ARE LISTED HERE.
@@ -18,16 +17,14 @@
   (sites/freeview.co.uk/freeview.co.uk.channels.xml and
    sites/player.ee.co.uk/player.ee.co.uk.channels.xml), so the IDs are real.
   (Whether each returns data on a given day can only be confirmed by an actual
-  online grab.) Channels in data/channels.js WITHOUT a line here have no verified
-  free UK source and are left to the app's synthetic schedule - that currently
+  online grab.) Channels in data/channels.js without a line here have no verified
+  free UK source and are left to the app's synthetic schedule; that currently
   includes Sky Showcase, Disney Junior/Channel, BabyTV, CNN, Al Jazeera, CNBC,
   Bloomberg, Nat Geo / Nat Geo Wild, Travel, E!, AMC, Syfy, the AXN and Star
   feeds, Hollywood and MTV Live.
 
-  Grab (in CI):
-    npm run grab -- --channels=ABS/channels.xml --output=ABS/guide.xml --days=2
-  then convert:
-    node scripts/xmltv-to-guide.mjs ABS/guide.xml data/guide.json
+  The workflow grabs into guide.xml then runs scripts/xmltv-to-guide.mjs to
+  produce data/guide.json. See .github/workflows/epg.yml for the exact commands.
 -->
 <channels>
   <!-- UK terrestrial via freeview.co.uk (region: London; UK timezone) -->
