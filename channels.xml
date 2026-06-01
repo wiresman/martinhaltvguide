@@ -33,6 +33,8 @@
   <!-- UK terrestrial via freeview.co.uk (region: London; UK timezone) -->
   <channel site="freeview.co.uk" lang="en" xmltv_id="BBCOne.uk" site_id="64257#4164">BBC One</channel>
   <channel site="freeview.co.uk" lang="en" xmltv_id="BBCTwo.uk" site_id="64257#4287">BBC Two</channel>
+  <channel site="freeview.co.uk" lang="en" xmltv_id="BBCThree.uk" site_id="64257#4288">BBC Three</channel>
+  <channel site="freeview.co.uk" lang="en" xmltv_id="BBCFour.uk" site_id="64257#4544">BBC Four</channel>
   <channel site="freeview.co.uk" lang="en" xmltv_id="BBCNews.uk" site_id="64257#4352">BBC News</channel>
   <channel site="freeview.co.uk" lang="en" xmltv_id="ITV1.uk" site_id="64257#8261">ITV</channel>
   <channel site="freeview.co.uk" lang="en" xmltv_id="ITV4.uk" site_id="64257#8330">ITV4</channel>
