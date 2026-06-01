@@ -92,29 +92,27 @@ const el = (tag, cls, text) => {
   return node;
 };
 
-function buildChannelCard(channel) {
-  const card = el("article", "channel-card");
-  card.dataset.channelId = channel.id;
-  card.dataset.search = (channel.name + " " + channel.group).toLowerCase();
+function buildChannelRow(channel) {
+  const row = el("article", "row");
+  row.dataset.channelId = channel.id;
+  row.dataset.search = (channel.name + " " + channel.group).toLowerCase();
 
-  // Header: logo chip + name
-  const header = el("div", "channel-head");
+  // Channel cell: logo chip + name
+  const chCell = el("div", "cell channel");
   const logo = el("div", "logo", initials(channel.name));
   logo.style.background = channel.color;
   const nameWrap = el("div", "channel-meta");
   nameWrap.appendChild(el("div", "channel-name", channel.name));
   nameWrap.appendChild(el("div", "channel-group", channel.group));
-  header.appendChild(logo);
-  header.appendChild(nameWrap);
-  card.appendChild(header);
+  chCell.appendChild(logo);
+  chCell.appendChild(nameWrap);
+  row.appendChild(chCell);
 
-  // Slots filled in by refresh()
-  const body = el("div", "slots");
-  body.appendChild(el("div", "slot now"));
-  body.appendChild(el("div", "slot next"));
-  card.appendChild(body);
+  // On now / Up next cells — filled in by refresh()
+  row.appendChild(el("div", "cell slot now"));
+  row.appendChild(el("div", "cell slot next"));
 
-  return card;
+  return row;
 }
 
 function renderNowSlot(slot, prog, at) {
@@ -162,18 +160,25 @@ function renderNextSlot(slot, prog) {
 function buildLayout() {
   const main = document.getElementById("guide");
   main.innerHTML = "";
+
+  // Aligned column header (channel | on now | up next)
+  const header = el("div", "grid-header");
+  header.appendChild(el("div", "col-label", "Channel"));
+  header.appendChild(el("div", "col-label", "On now"));
+  header.appendChild(el("div", "col-label", "Up next"));
+  main.appendChild(header);
+
   for (const group of GROUPS) {
     const section = el("section", "group");
     section.id = "group-" + group.genre;
 
-    const heading = el("h2", "group-title", group.title);
-    section.appendChild(heading);
+    section.appendChild(el("h2", "group-title", group.title));
 
-    const grid = el("div", "channel-grid");
+    const rows = el("div", "rows");
     for (const ch of group.channels) {
-      grid.appendChild(buildChannelCard({ ...ch, genre: group.genre, group: group.title }));
+      rows.appendChild(buildChannelRow({ ...ch, genre: group.genre, group: group.title }));
     }
-    section.appendChild(grid);
+    section.appendChild(rows);
     main.appendChild(section);
   }
 }
@@ -221,9 +226,9 @@ function wireSearch() {
     for (const group of GROUPS) {
       const section = document.getElementById("group-" + group.genre);
       anyVisibleInGroup = false;
-      section.querySelectorAll(".channel-card").forEach((card) => {
-        const match = !q || card.dataset.search.includes(q);
-        card.style.display = match ? "" : "none";
+      section.querySelectorAll(".row").forEach((row) => {
+        const match = !q || row.dataset.search.includes(q);
+        row.style.display = match ? "" : "none";
         if (match) anyVisibleInGroup = true;
       });
       section.style.display = anyVisibleInGroup ? "" : "none";

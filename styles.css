@@ -145,15 +145,43 @@ body {
 }
 
 /* ------------------------------ Guide ----------------------------- */
+/* Aligned now/next grid: every row shares the same column template, so
+ * the Channel / On now / Up next columns line up like a TV listings grid. */
 
 .guide {
+  --cols: minmax(150px, 230px) 1fr 1fr;
+  --col-gap: 14px;
   max-width: 1100px;
   margin: 0 auto;
   padding: 8px 22px 48px;
 }
 
+/* Sticky column header that lines up with the rows below it. */
+.grid-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: var(--cols);
+  gap: var(--col-gap);
+  padding: 12px 16px 10px;
+  margin-top: 8px;
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+  border-bottom: 1px solid var(--line);
+}
+
+.col-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
 .group {
-  margin-top: 34px;
+  margin-top: 26px;
 }
 
 .group-title {
@@ -162,35 +190,43 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-3);
-  margin: 0 0 14px 4px;
+  margin: 0 0 10px 4px;
 }
 
-.channel-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 14px;
-}
-
-/* --------------------------- Channel card ------------------------- */
-
-.channel-card {
+/* Each group is one rounded panel; rows are separated by hairlines. */
+.rows {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 16px 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  overflow: hidden;
 }
 
-.channel-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08), 0 16px 38px rgba(0, 0, 0, 0.09);
+.row {
+  display: grid;
+  grid-template-columns: var(--cols);
+  gap: var(--col-gap);
+  align-items: stretch;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.15s ease;
 }
 
-.channel-head {
+.row:last-child {
+  border-bottom: none;
+}
+
+.row:hover {
+  background: var(--surface-2);
+}
+
+/* --------------------------- Channel cell ------------------------- */
+
+.cell {
+  min-width: 0;
+}
+
+.cell.channel {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -198,14 +234,14 @@ body {
 
 .logo {
   flex: 0 0 auto;
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
   display: grid;
   place-items: center;
   color: #fff;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: -0.01em;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12),
@@ -217,27 +253,27 @@ body {
 }
 
 .channel-name {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .channel-group {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-3);
 }
 
-/* ------------------------------ Slots ----------------------------- */
-
-.slots {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+/* --------------------------- Now/Next cells ----------------------- */
 
 .slot {
   border-radius: var(--radius-sm);
-  padding: 12px 14px;
+  padding: 9px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .slot.now {
@@ -248,7 +284,10 @@ body {
   background: var(--surface-2);
 }
 
+/* Per-cell labels: redundant on desktop (column header covers it),
+ * shown only when rows stack on narrow screens. */
 .slot-label {
+  display: none;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -261,10 +300,15 @@ body {
 }
 
 .slot-title {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--text);
+}
+
+.slot.next .slot-title {
+  font-weight: 500;
+  color: var(--text-2);
 }
 
 .slot-title.muted {
@@ -275,37 +319,38 @@ body {
 .slot-meta {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
   gap: 10px;
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 .slot-time {
-  font-size: 13px;
+  font-size: 12px;
   font-variant-numeric: tabular-nums;
   color: var(--text-2);
   font-weight: 500;
 }
 
 .slot-remaining {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-3);
   font-variant-numeric: tabular-nums;
+  margin-left: auto;
 }
 
 .slot-desc {
-  margin-top: 8px;
-  font-size: 13px;
+  margin-top: 6px;
+  font-size: 12px;
   color: var(--text-2);
+  line-height: 1.35;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
 .progress {
-  margin-top: 10px;
-  height: 5px;
+  margin-top: 8px;
+  height: 4px;
   border-radius: 999px;
   background: color-mix(in srgb, var(--accent) 22%, transparent);
   overflow: hidden;
@@ -329,9 +374,25 @@ body {
   text-align: center;
 }
 
-@media (max-width: 540px) {
-  .channel-grid {
+/* --------------------------- Responsive --------------------------- */
+/* On narrow screens the three columns won't fit side by side, so each
+ * row stacks (channel on top, then On now / Up next) and we surface the
+ * per-cell labels instead of the column header. */
+
+@media (max-width: 640px) {
+  .grid-header {
+    display: none;
+  }
+  .row {
     grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 14px 14px;
+  }
+  .slot-label {
+    display: block;
+  }
+  .slot-desc {
+    -webkit-line-clamp: 2;
   }
   .search {
     width: 150px;
@@ -340,6 +401,6 @@ body {
     padding: 12px 16px;
   }
   .guide {
-    padding: 8px 16px 40px;
+    padding: 8px 14px 40px;
   }
 }
