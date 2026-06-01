@@ -13,15 +13,18 @@
                 (scripts/xmltv-to-guide.mjs) attaches the listings to the card.
 
   ONLY VERIFIED CHANNELS ARE LISTED HERE.
-  Every site_id below was taken from the grabber's own committed channel catalog
-  (sites/freeview.co.uk/freeview.co.uk.channels.xml and
-   sites/player.ee.co.uk/player.ee.co.uk.channels.xml), so the IDs are real.
+  Every site_id below was taken from the grabber's own committed channel
+  catalogs, so the IDs are real:
+    sites/freeview.co.uk/freeview.co.uk.channels.xml   (UK terrestrial)
+    sites/player.ee.co.uk/player.ee.co.uk.channels.xml (EE TV, UK)
+    sites/tvguide.com/tvguide.com.channels.xml         (US national)
+    sites/meo.pt/meo.pt.channels.xml                   (Portugal; AXN/Star/AMC/
+                                                        Hollywood feeds)
+    sites/directv.com/directv.com.channels.xml         (US; BabyTV, MTV Live)
+    sites/aljazeera.com/aljazeera.com.channels.xml     (Al Jazeera English)
   (Whether each returns data on a given day can only be confirmed by an actual
-  online grab.) Channels in data/channels.js without a line here have no verified
-  free UK source and are left to the app's synthetic schedule; that currently
-  includes Disney Junior/Channel, BabyTV, CNN, Al Jazeera, CNBC, Bloomberg,
-  Nat Geo / Nat Geo Wild, Travel, E!, AMC, Syfy, the AXN and Star feeds,
-  Hollywood and MTV Live.
+  online grab.) Channels in data/channels.js without a line here have no
+  verified source and are left to the app's synthetic schedule.
 
   The workflow grabs into guide.xml then runs scripts/xmltv-to-guide.mjs to
   produce data/guide.json. See .github/workflows/epg.yml for the exact commands.
@@ -46,4 +49,31 @@
   <channel site="player.ee.co.uk" lang="en" xmltv_id="Discovery.uk" site_id="http://bds.tv/services/BT_608791">Discovery</channel>
   <channel site="player.ee.co.uk" lang="en" xmltv_id="TLC.uk" site_id="dvb://233a..6d60">TLC</channel>
   <channel site="player.ee.co.uk" lang="en" xmltv_id="MTV.uk" site_id="http://bds.tv/services/BT_57005_2501_SD">MTV</channel>
+  <!-- US national via tvguide.com (US Eastern listings) -->
+  <channel site="tvguide.com" lang="en" xmltv_id="DisneyJunior.us" site_id="9233009788">Disney Junior</channel>
+  <channel site="tvguide.com" lang="en" xmltv_id="DisneyChannel.us" site_id="9200018475">Disney Channel</channel>
+  <channel site="tvguide.com" lang="en" xmltv_id="CNN.us" site_id="9233013812">CNN</channel>
+  <channel site="tvguide.com" lang="en" xmltv_id="CNBC.us" site_id="9200009413">CNBC</channel>
+  <channel site="tvguide.com" lang="en" xmltv_id="Bloomberg.us" site_id="9233015798">Bloomberg Television</channel>
+  <channel site="tvguide.com" lang="en" xmltv_id="NatGeo.us" site_id="9233002310">National Geographic</channel>
+  <channel site="tvguide.com" lang="en" xmltv_id="NatGeoWild.us" site_id="9200004683">National Geographic Wild</channel>
+  <channel site="tvguide.com" lang="en" xmltv_id="Travel.us" site_id="9233000035">Travel Channel</channel>
+  <channel site="tvguide.com" lang="en" xmltv_id="EEntertainment.us" site_id="9200012343">E!</channel>
+  <channel site="tvguide.com" lang="en" xmltv_id="Syfy.us" site_id="9200004316">Syfy</channel>
+  <!-- US via directv.com -->
+  <channel site="directv.com" lang="en" xmltv_id="BabyTV.us" site_id="e68a9f77-7585-4b8a-a365-efffe5531d25">BabyTV</channel>
+  <channel site="directv.com" lang="en" xmltv_id="MTVLive.us" site_id="40d3f0f0-6504-4d54-b5dd-3ba65f2bb4e1">MTV Live</channel>
+  <!-- Al Jazeera English via aljazeera.com -->
+  <channel site="aljazeera.com" lang="en" xmltv_id="AlJazeera.qa" site_id="aje#">Al Jazeera English</channel>
+  <!-- Portugal via meo.pt (AXN / Star / AMC / Hollywood feeds) -->
+  <channel site="meo.pt" lang="pt" xmltv_id="AMC.pt" site_id="AMCHD">AMC</channel>
+  <channel site="meo.pt" lang="pt" xmltv_id="AMCBreak.pt" site_id="AMCBRE">AMC Break</channel>
+  <channel site="meo.pt" lang="pt" xmltv_id="AXN.pt" site_id="AXNHD">AXN HD</channel>
+  <channel site="meo.pt" lang="pt" xmltv_id="AXNMovies.pt" site_id="AXNMHD">AXN Movies HD</channel>
+  <channel site="meo.pt" lang="pt" xmltv_id="AXNWhite.pt" site_id="AXWHD">AXN White HD</channel>
+  <channel site="meo.pt" lang="pt" xmltv_id="StarChannel.pt" site_id="STARCHA">Star Channel</channel>
+  <channel site="meo.pt" lang="pt" xmltv_id="StarMovies.pt" site_id="STARMOV">Star Movies</channel>
+  <channel site="meo.pt" lang="pt" xmltv_id="StarCrime.pt" site_id="STARCRI">Star Crime</channel>
+  <channel site="meo.pt" lang="pt" xmltv_id="StarComedy.pt" site_id="STARCOM">Star Comedy</channel>
+  <channel site="meo.pt" lang="pt" xmltv_id="Hollywood.pt" site_id="HOLHD">Hollywood</channel>
 </channels>
