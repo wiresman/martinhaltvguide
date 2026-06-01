@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-01T19:30:16.939Z",
+  "generated": "2026-06-01T19:38:12.230Z",
   "note": "Generated from XMLTV by scripts/xmltv-to-guide.mjs.",
   "channels": {
     "al-jazeera": [
@@ -2134,12 +2134,6 @@
     ],
     "baby-tv": [
       {
-        "title": "Exploring with The World is a Wonder",
-        "desc": "The World is a Wonder,Songs & Rhymes,Mice Builders NEW,Songs & Rhymes,The Jungle Book,Oliver,What A Wonderful Day,Stick with Mick.",
-        "start": "2026-06-01T19:00:00.000Z",
-        "stop": "2026-06-01T19:30:00.000Z"
-      },
-      {
         "title": "Songs & Rhymes and other stories",
         "desc": "Songs & Rhymes, Charlie & the Numbers, Teeny & Tiny's Classroom, Giggle Wiggle, Snail Trail, Songs & Rhymes, Happy Birthday to You, Bug'n'Play to the Rescue.",
         "start": "2026-06-01T19:30:00.000Z",
@@ -2411,7 +2405,7 @@
       },
       {
         "title": "Magical First Discoveries",
-        "desc": "The Cuddlies,Mike's Bikes,Pix & Leo,Oliver,Beep Beep.",
+        "desc": "The Cuddlies, Mike's Bikes, Pix & Leo, Oliver, Beep Beep.",
         "start": "2026-06-02T18:00:00.000Z",
         "stop": "2026-06-02T18:30:00.000Z"
       },
@@ -2428,10 +2422,10 @@
         "stop": "2026-06-02T19:30:00.000Z"
       },
       {
-        "title": "Exploring with Songs & Rhymes",
-        "desc": "Songs & Rhymes,Mice Builders NEW,Songs & Rhymes,The Jungle Book,What A Wonderful Day,Stick with Mick,BabyTV Studios,Walter & Dude.",
-        "start": "2026-06-02T19:00:00.000Z",
-        "stop": "2026-06-02T19:30:00.000Z"
+        "title": "Songs & Rhymes and other stories",
+        "desc": "Songs & Rhymes, Charlie & the Numbers, Teeny & Tiny's Classroom, Giggle Wiggle, Snail Trail, Songs & Rhymes, Happy Birthday to You, Bug'n'Play to the Rescue.",
+        "start": "2026-06-02T19:30:00.000Z",
+        "stop": "2026-06-02T20:00:00.000Z"
       },
       {
         "title": "Songs & Rhymes and other stories",
@@ -2477,7 +2471,7 @@
       },
       {
         "title": "Play & Learn with Songs & Rhymes",
-        "desc": "Songs & Rhymes,Bug'n'Play to the Rescue,Happy Birthday to You,The Cuddlies,Bath Tubbies,Jump Out of Bed Sleepy Head.",
+        "desc": "Songs & Rhymes, Bug'n'Play to the Rescue, Happy Birthday to You, The Cuddlies, Bath Tubbies, Jump Out of Bed Sleepy Head.",
         "start": "2026-06-02T23:00:00.000Z",
         "stop": "2026-06-02T23:30:00.000Z"
       },
@@ -2705,7 +2699,7 @@
       },
       {
         "title": "Magical First Discoveries",
-        "desc": "The Cuddlies,Mike's Bikes,Pix & Leo,Oliver,Beep Beep.",
+        "desc": "The Cuddlies, Mike's Bikes, Pix & Leo, Oliver, Beep Beep.",
         "start": "2026-06-03T18:00:00.000Z",
         "stop": "2026-06-03T18:30:00.000Z"
       },
@@ -2720,6 +2714,12 @@
         "desc": "Songs & Rhymes,Mice Builders NEW,Songs & Rhymes,The Jungle Book,What A Wonderful Day,Stick with Mick,BabyTV Studios,Walter & Dude.",
         "start": "2026-06-03T19:00:00.000Z",
         "stop": "2026-06-03T19:30:00.000Z"
+      },
+      {
+        "title": "Songs & Rhymes and other stories",
+        "desc": "Songs & Rhymes, Charlie & the Numbers, Teeny & Tiny's Classroom, Giggle Wiggle, Snail Trail, Songs & Rhymes, Happy Birthday to You, Bug'n'Play to the Rescue.",
+        "start": "2026-06-03T19:30:00.000Z",
+        "stop": "2026-06-03T20:00:00.000Z"
       }
     ],
     "bbc-four": [
@@ -8555,12 +8555,6 @@
     "disney-channel": [
       {
         "title": "Phineas and Ferb",
-        "desc": "The boys use supersized attractions to improve the local summer block party; Mom gets hit by Doof's inator, so the kids try to save her.",
-        "start": "2026-06-01T19:00:00.000Z",
-        "stop": "2026-06-01T19:30:00.000Z"
-      },
-      {
-        "title": "Phineas and Ferb",
         "desc": "Doof steals food as the gang creates a submarine sandwich submarine; Candace takes her driving test, and Doof causes trouble in traffic.",
         "start": "2026-06-01T19:30:00.000Z",
         "stop": "2026-06-01T20:00:00.000Z"
@@ -8609,9 +8603,9 @@
       },
       {
         "title": "Hannah Montana",
-        "desc": "Miley begins to miss her old life living in the country of Tennessee and must decide whether to stay a rock star or move back and be a country girl; Oliver is offered to go on a concert tour, but real",
-        "start": "2026-06-01T23:00:00.000Z",
-        "stop": "2026-06-01T23:30:00.000Z"
+        "desc": "Miley struggles with the idea of leaving her life behind to get back to her roots; Oliver thinks about not going on the tour to stay home with Lilly; Jackson feels good until he realizes the state of",
+        "start": "2026-06-01T23:30:00.000Z",
+        "stop": "2026-06-02T00:00:00.000Z"
       },
       {
         "title": "Hannah Montana",
@@ -8681,9 +8675,9 @@
       },
       {
         "title": "Big City Greens",
-        "desc": "Cricket is mistakenly assumed to be a tween pop music sensation, which leads him to keep the assumption going so he can soak up the perks of fame; Remy and Cricket decide to try impressing Remy's fath",
-        "start": "2026-06-02T07:00:00.000Z",
-        "stop": "2026-06-02T07:30:00.000Z"
+        "desc": "Remy and Cricket decide to start up a heated game of \"H-O-R-S-E\" on the hottest day of the year; Cricket is on the verge of enduring a brutal punishment, so he attempts to get his rational father to b",
+        "start": "2026-06-02T07:30:00.000Z",
+        "stop": "2026-06-02T08:00:00.000Z"
       },
       {
         "title": "Big City Greens",
@@ -8734,10 +8728,10 @@
         "stop": "2026-06-02T11:30:00.000Z"
       },
       {
-        "title": "Magicampers",
-        "desc": "Dracoon and Jayden can't bake a cake; the campers take a Fierce or Fabulous test.",
-        "start": "2026-06-02T11:00:00.000Z",
-        "stop": "2026-06-02T11:30:00.000Z"
+        "title": "Spidey and His Amazing Friends",
+        "desc": "Doc Ock prepares to launch a rocket, so Team Spidey and the Spidey bots step in to put an end to the plan; villains cause chaos with Black Panther's battery.",
+        "start": "2026-06-02T11:30:00.000Z",
+        "stop": "2026-06-02T12:00:00.000Z"
       },
       {
         "title": "Spidey and His Amazing Friends",
@@ -8789,9 +8783,9 @@
       },
       {
         "title": "Bluey",
-        "desc": "Bluey is determined to make Bingo feel happy again after she gets upset from a game at dinner; Bluey and Bingo distract their father from taking them to school; Bingo has a dream about going on an int",
-        "start": "2026-06-02T15:00:00.000Z",
-        "stop": "2026-06-02T15:30:00.000Z"
+        "desc": "Dad must channel his inner child to make a home with Bingo and Bluey on Rug Island; pretending to be a hairdresser, Bluey finds lice in Dad's hair; Bluey and Bingo wait for a rubber gecko to fall from",
+        "start": "2026-06-02T15:30:00.000Z",
+        "stop": "2026-06-02T16:00:00.000Z"
       },
       {
         "title": "Bluey",
@@ -8843,9 +8837,9 @@
       },
       {
         "title": "Phineas and Ferb",
-        "desc": "Doof bring oil to the waterpark; the boys try to keep cool with an endless ice luge; Candace and Doof visit the same psychologist who wonders whether their experiences are connected.",
-        "start": "2026-06-02T19:00:00.000Z",
-        "stop": "2026-06-02T19:30:00.000Z"
+        "desc": "Phineas and Ferb build a giant zoetrope; the kids encounter an army of Doof-plants after building a giant bookcase.",
+        "start": "2026-06-02T19:30:00.000Z",
+        "stop": "2026-06-02T20:00:00.000Z"
       },
       {
         "title": "Phineas and Ferb",
@@ -8897,9 +8891,9 @@
       },
       {
         "title": "The Suite Life of Zack & Cody",
-        "desc": "Zack has a dream that he, his family and his friends are in the past at the Boston Tea Party, and he is inspired to battle against the destruction of his and Cody's favorite park, which is scheduled t",
-        "start": "2026-06-02T23:00:00.000Z",
-        "stop": "2026-06-02T23:30:00.000Z"
+        "desc": "Maddie decides to throw her sweet 16 on the Tipton, so London decides that she should throw her own sweet 16; Maddie tries to convince London to reschedule her party, since they share the same friends",
+        "start": "2026-06-02T23:30:00.000Z",
+        "stop": "2026-06-03T00:00:00.000Z"
       },
       {
         "title": "The Suite Life of Zack & Cody",
@@ -8981,9 +8975,9 @@
       },
       {
         "title": "Big City Greens",
-        "desc": "Remy's unpreparedness for an upcoming violin recital jeopardizes his future life plan; Gramma comes to realize that thieves are her best rideshare customers.",
-        "start": "2026-06-03T07:00:00.000Z",
-        "stop": "2026-06-03T07:30:00.000Z"
+        "desc": "Tilly scours the mall to update her look to appear more mature when she is mistakenly assumed to be a baby; Cricket gives Bill an idea to avoid having to do chores by purchasing a robot to work around",
+        "start": "2026-06-03T07:30:00.000Z",
+        "stop": "2026-06-03T08:00:00.000Z"
       },
       {
         "title": "Big City Greens",
@@ -9034,10 +9028,10 @@
         "stop": "2026-06-03T11:30:00.000Z"
       },
       {
-        "title": "Magicampers",
-        "desc": "Magical gardening goes wrong; Darly, Loomis and Dracoon find a powerful magic gem.",
-        "start": "2026-06-03T11:00:00.000Z",
-        "stop": "2026-06-03T11:30:00.000Z"
+        "title": "Spidey and His Amazing Friends",
+        "desc": "Lizard transforms iguanas from Lagarto Island into his sidekicks; Rhino steals Team Spidey's Dino-Web Crawler.",
+        "start": "2026-06-03T11:30:00.000Z",
+        "stop": "2026-06-03T12:00:00.000Z"
       },
       {
         "title": "Spidey and His Amazing Friends",
@@ -9089,9 +9083,9 @@
       },
       {
         "title": "Bluey",
-        "desc": "Bluey manages to throw the Dad Train's entire schedule into disarray; Bluey and Bingo play a game in which they pretend to be a queen and butler; Bluey and Bingo make their own special world from thei",
-        "start": "2026-06-03T15:00:00.000Z",
-        "stop": "2026-06-03T15:30:00.000Z"
+        "desc": "A new dog at school is recruited into Rusty's army, but he proves to be a lackluster soldier; Bingo and Bluey plan a romantic dinner for their parents; Blue and Bingo interrupt Dad's plans to remove t",
+        "start": "2026-06-03T15:30:00.000Z",
+        "stop": "2026-06-03T16:00:00.000Z"
       },
       {
         "title": "Bluey",
@@ -9140,15 +9134,15 @@
         "desc": "The boys start their own pet wash while waiting for Perry at the vet; Carl works three part-time jobs while helping Perry take down Doof.",
         "start": "2026-06-03T19:00:00.000Z",
         "stop": "2026-06-03T19:30:00.000Z"
+      },
+      {
+        "title": "Phineas and Ferb",
+        "desc": "Doof steals shrunken goods as the Flynn-Fletchers go on a cruise; Doof renews his evil business license, and Isabella tries to lead the Fireside Girls.",
+        "start": "2026-06-03T19:30:00.000Z",
+        "stop": "2026-06-03T20:00:00.000Z"
       }
     ],
     "disney-junior": [
-      {
-        "title": "Bluey",
-        "desc": "Muffin's father tells her that she is special and she misinterprets it to assume she can do whatever she wants; Mom, Dad and Bingo attempt to pass Swim School; Bingo tells her dad about a bully in her",
-        "start": "2026-06-01T19:05:00.000Z",
-        "stop": "2026-06-01T19:30:00.000Z"
-      },
       {
         "title": "Disney Jr.'s Ariel",
         "desc": "Ariel goes on a fun adventure to help her new goldfish friend search for gold; Ariel meets a new pufferfish friend named Delroy at the park and helps find a game he can play.",
@@ -9204,10 +9198,10 @@
         "stop": "2026-06-01T23:30:00.000Z"
       },
       {
-        "title": "Sofia the First: Royal Magic",
-        "desc": "Sofia joins a magical challenge against students from the other castles; Layla tries a levitation spell but instead reveals her ability to sprout butterfly wings.",
-        "start": "2026-06-01T23:05:00.000Z",
-        "stop": "2026-06-01T23:30:00.000Z"
+        "title": "Superkitties",
+        "desc": "Willa and the SuperKitties hurry to reclaim stolen pet beds; the Glamsters search for a unicorn in the jungle and create a glittery mess.",
+        "start": "2026-06-01T23:30:00.000Z",
+        "stop": "2026-06-01T23:55:00.000Z"
       },
       {
         "title": "Superkitties",
@@ -9402,10 +9396,10 @@
         "stop": "2026-06-02T11:30:00.000Z"
       },
       {
-        "title": "Mickey Mouse Clubhouse+",
-        "desc": "When Mickey and friends hear about a meteor shower, they do everything to stay awake and watch.",
-        "start": "2026-06-02T11:00:00.000Z",
-        "stop": "2026-06-02T11:30:00.000Z"
+        "title": "Sofia the First: Royal Magic",
+        "desc": "At a sleepover at Sofia's castle with Camila and Layla, stuffies magically come to life; a grumpy dragon is on the loose, and Zane tries to tame the beast.",
+        "start": "2026-06-02T11:30:00.000Z",
+        "stop": "2026-06-02T12:00:00.000Z"
       },
       {
         "title": "Sofia the First: Royal Magic",
@@ -9528,10 +9522,10 @@
         "stop": "2026-06-02T19:30:00.000Z"
       },
       {
-        "title": "Bluey",
-        "desc": "At the supermarket, Bluey acts like a parent while Dad acts like a child; when Bluey and Judo run away during a game, a heartbroken Bingo is left all alone; bored of the playground, Dad and the kids g",
-        "start": "2026-06-02T19:05:00.000Z",
-        "stop": "2026-06-02T19:30:00.000Z"
+        "title": "Disney Jr.'s Ariel",
+        "desc": "Ariel wants to give Triton the perfect Father's Day gift; Ariel and her sisters want to do nice things for Ursula in honor of Tantie's Day.",
+        "start": "2026-06-02T19:30:00.000Z",
+        "stop": "2026-06-02T19:55:00.000Z"
       },
       {
         "title": "Disney Jr.'s Ariel",
@@ -9588,10 +9582,10 @@
         "stop": "2026-06-02T23:30:00.000Z"
       },
       {
-        "title": "Sofia the First: Royal Magic",
-        "desc": "Camila wants to be Cedric's apprentice but causes chaos with advanced spells; Sofia is paired up with Zane's sister for a tri-castle activity.",
-        "start": "2026-06-02T23:05:00.000Z",
-        "stop": "2026-06-02T23:30:00.000Z"
+        "title": "Superkitties",
+        "desc": "Mr. Puppypaws sends the SuperKitties on a wild stroller chase through Kittydale; Zsa-Zsa steals the Glamster's ball to shield George from getting another boo-boo.",
+        "start": "2026-06-02T23:30:00.000Z",
+        "stop": "2026-06-02T23:55:00.000Z"
       },
       {
         "title": "Superkitties",
@@ -9786,10 +9780,10 @@
         "stop": "2026-06-03T11:30:00.000Z"
       },
       {
-        "title": "Mickey Mouse Clubhouse+",
-        "desc": "When Daisy's pearl necklace breaks in star Lake, the pals dive underwater to find the missing pearls with help from their new friend, Sea Queen Clarabelle.",
-        "start": "2026-06-03T11:00:00.000Z",
-        "stop": "2026-06-03T11:30:00.000Z"
+        "title": "Sofia the First: Royal Magic",
+        "desc": "It's Sofia's first day of royal magic school, and she teams up with new friends to win a race and gets a special visit.",
+        "start": "2026-06-03T11:30:00.000Z",
+        "stop": "2026-06-03T12:00:00.000Z"
       },
       {
         "title": "Sofia the First: Royal Magic",
@@ -9910,15 +9904,15 @@
         "desc": "Muffin pretends to be Grouchy Granny at a garage sale; while playing astronauts with Jack and Rusty, Mackenzie keeps going missing and no one knows why, not even Mackenzie; Bluey and Bingo give their",
         "start": "2026-06-03T19:05:00.000Z",
         "stop": "2026-06-03T19:30:00.000Z"
+      },
+      {
+        "title": "Disney Jr.'s Ariel",
+        "desc": "When Sebastian's favorite pencil breaks, Ariel tries to give him a new one; Akiko breaks a crystal string on her favorite instrument.",
+        "start": "2026-06-03T19:30:00.000Z",
+        "stop": "2026-06-03T19:55:00.000Z"
       }
     ],
     "e-hd": [
-      {
-        "title": "Two and a Half Men",
-        "desc": "After Alan learns that Walden has a connection to Lynda Carter, he asks him to set the two of them up on a date, leading Walden to go against his better judgement and invite Lynda to their house for d",
-        "start": "2026-06-01T19:00:00.000Z",
-        "stop": "2026-06-01T19:30:00.000Z"
-      },
       {
         "title": "Two and a Half Men",
         "desc": "Walden and Alan both find dates with two ideal women, until jealousy begins to ruin their plans.",
@@ -9969,9 +9963,9 @@
       },
       {
         "title": "Two and a Half Men",
-        "desc": "Alan learns that Lyndsey has broken up with Larry, but failed to actually let him know yet; Walden grows determined to prove that he's a manly man.",
-        "start": "2026-06-01T23:00:00.000Z",
-        "stop": "2026-06-01T23:30:00.000Z"
+        "desc": "Alan provides Lyndsey with the opportunity to choose between him and Larry; Jenny begins to fear that she and Brooke are no longer as close as they used to be.",
+        "start": "2026-06-01T23:30:00.000Z",
+        "stop": "2026-06-02T00:00:00.000Z"
       },
       {
         "title": "Two and a Half Men",
@@ -10023,9 +10017,9 @@
       },
       {
         "title": "Two and a Half Men",
-        "desc": "Alan finally decides to confess his true identity to Larry, who has been more than happy to bless his sister's engagement and wedding to Alan, but finds himself faced with one consequence after anothe",
-        "start": "2026-06-02T03:00:00.000Z",
-        "stop": "2026-06-02T03:30:00.000Z"
+        "desc": "After facing a major health scare on Halloween day, a changed Walden turns to Alan for assistance in redetermining the priorities in his life.",
+        "start": "2026-06-02T03:30:00.000Z",
+        "stop": "2026-06-02T04:00:00.000Z"
       },
       {
         "title": "Two and a Half Men",
@@ -10161,9 +10155,9 @@
       },
       {
         "title": "How I Met Your Mother",
-        "desc": "Ted secretly makes of a list featuring specific activities that he feels he and all of his friends are far too old to do any longer, and a defiantly irate Barney sets out to complete every single acti",
-        "start": "2026-06-02T19:00:00.000Z",
-        "stop": "2026-06-02T19:30:00.000Z"
+        "desc": "Finding himself out of a job, Ted forms an architectural firm out of his apartment and hires an intern to help him get his company off the ground, but he soon regrets the move after the intern starts",
+        "start": "2026-06-02T19:30:00.000Z",
+        "stop": "2026-06-02T20:00:00.000Z"
       },
       {
         "title": "How I Met Your Mother",
@@ -10215,9 +10209,9 @@
       },
       {
         "title": "How I Met Your Mother",
-        "desc": "Robin comes to suspect that Barney's recent and decidedly evasive behavior means that he must be cheating on her with someone else, but she is surprised to discover that he is simply receiving some ro",
-        "start": "2026-06-02T23:00:00.000Z",
-        "stop": "2026-06-02T23:30:00.000Z"
+        "desc": "Lily and Marshall realize that Barney and Robin are the perfect double-date friends, but when they come on a little too strong in their effort to impress, Barney and Robin try to break off the relatio",
+        "start": "2026-06-02T23:30:00.000Z",
+        "stop": "2026-06-03T00:00:00.000Z"
       },
       {
         "title": "How I Met Your Mother",
@@ -10269,9 +10263,9 @@
       },
       {
         "title": "How I Met Your Mother",
-        "desc": "The group attempts to stop smoking as Robin clashes with her new jaded co-worker and is presented with a prime reason to quit when a potential interviewee is an advocate of anti-smoking laws; Ted uses",
-        "start": "2026-06-03T03:00:00.000Z",
-        "stop": "2026-06-03T03:30:00.000Z"
+        "desc": "Ted continues through the narrative, as he gets one step closer to his future wife by meeting her book-smart roommate; Barney attempts to spark up a romance with a business suit-hating bartender, but",
+        "start": "2026-06-03T03:30:00.000Z",
+        "stop": "2026-06-03T04:00:00.000Z"
       },
       {
         "title": "How I Met Your Mother",
@@ -11472,12 +11466,6 @@
     ],
     "mtv-live": [
       {
-        "title": "Epic.Awesome.Videos",
-        "desc": "",
-        "start": "2026-06-01T19:00:00.000Z",
-        "stop": "2026-06-01T19:30:00.000Z"
-      },
-      {
         "title": "Conor Maynard: MTV Brand New Live",
         "desc": "Emerging British pop star Conor Maynard performs; songs include \"Can't Say No\" and \"Vegas Girl\"; live in London.",
         "start": "2026-06-01T19:30:00.000Z",
@@ -11824,6 +11812,12 @@
         "desc": "",
         "start": "2026-06-03T19:00:00.000Z",
         "stop": "2026-06-03T19:30:00.000Z"
+      },
+      {
+        "title": "PUSH Showcase: Shaboozey",
+        "desc": "",
+        "start": "2026-06-03T19:30:00.000Z",
+        "stop": "2026-06-03T20:00:00.000Z"
       }
     ],
     "natgeo-hd": [
@@ -11954,10 +11948,10 @@
         "stop": "2026-06-02T11:30:00.000Z"
       },
       {
-        "title": "Inogen Portable Oxygen - No More Tanks!",
-        "desc": "Regain independence and enjoy greater mobility with the compact design and long-lasting battery of portable oxygen.",
-        "start": "2026-06-02T11:00:00.000Z",
-        "stop": "2026-06-02T11:30:00.000Z"
+        "title": "Paid Program",
+        "desc": "Sponsored television programming.",
+        "start": "2026-06-02T11:30:00.000Z",
+        "stop": "2026-06-02T12:00:00.000Z"
       },
       {
         "title": "Paid Program",
@@ -12154,8 +12148,8 @@
       {
         "title": "Paid Program",
         "desc": "Sponsored television programming.",
-        "start": "2026-06-03T11:00:00.000Z",
-        "stop": "2026-06-03T11:30:00.000Z"
+        "start": "2026-06-03T11:30:00.000Z",
+        "stop": "2026-06-03T12:00:00.000Z"
       },
       {
         "title": "Paid Program",
@@ -12207,9 +12201,9 @@
       },
       {
         "title": "Border Security: America's Front Line",
-        "desc": "At the John F. Kennedy International Airport mail facility, officers uncovered a package of potentially lethal powder.",
-        "start": "2026-06-03T15:00:00.000Z",
-        "stop": "2026-06-03T15:30:00.000Z"
+        "desc": "An agriculture specialist examines a traveler with exotic edibles.",
+        "start": "2026-06-03T15:30:00.000Z",
+        "stop": "2026-06-03T16:00:00.000Z"
       },
       {
         "title": "Border Security: America's Front Line",
@@ -12258,6 +12252,12 @@
         "desc": "A traveler is in the weeds after marijuana residue is discovered in his car.",
         "start": "2026-06-03T19:00:00.000Z",
         "stop": "2026-06-03T19:30:00.000Z"
+      },
+      {
+        "title": "Border Security: America's Front Line",
+        "desc": "A couple in Chicago breaks the golden rule by failing to declare their jewelry.",
+        "start": "2026-06-03T19:30:00.000Z",
+        "stop": "2026-06-03T20:00:00.000Z"
       }
     ],
     "natgeo-wild": [
@@ -12354,8 +12354,8 @@
       {
         "title": "Paid Program",
         "desc": "Sponsored television programming.",
-        "start": "2026-06-02T07:00:00.000Z",
-        "stop": "2026-06-02T07:30:00.000Z"
+        "start": "2026-06-02T07:30:00.000Z",
+        "stop": "2026-06-02T08:00:00.000Z"
       },
       {
         "title": "Paid Program",
@@ -12558,8 +12558,8 @@
       {
         "title": "Paid Program",
         "desc": "Sponsored television programming.",
-        "start": "2026-06-03T07:00:00.000Z",
-        "stop": "2026-06-03T07:30:00.000Z"
+        "start": "2026-06-03T07:30:00.000Z",
+        "stop": "2026-06-03T08:00:00.000Z"
       },
       {
         "title": "Paid Program",
@@ -17260,10 +17260,10 @@
         "stop": "2026-06-03T07:28:00.000Z"
       },
       {
-        "title": "Geostorm",
-        "desc": "A system of satellites designed to protect the planet from extreme weather malfunctions due to an intentionally installed virus, planted by a villain with their own agenda, leaving it to the system's",
-        "start": "2026-06-03T05:00:00.000Z",
-        "stop": "2026-06-03T07:28:00.000Z"
+        "title": "The Twilight Zone",
+        "desc": "A street peddler seems to have the uncanny ability to give people what they need before they even know they need it, and a small-time crook recognizes his clairvoyant talent and decides to exploit it",
+        "start": "2026-06-03T07:28:00.000Z",
+        "stop": "2026-06-03T07:59:00.000Z"
       },
       {
         "title": "The Twilight Zone",
@@ -17320,10 +17320,10 @@
         "stop": "2026-06-03T15:30:00.000Z"
       },
       {
-        "title": "Violent Night",
-        "desc": "On Christman eve, a team is hired to break into a mansion and take a wealthy family hostage, but their plans for awry when they unexpectedly encounter an additional person, Santa Claus, and he will do",
-        "start": "2026-06-03T13:00:00.000Z",
-        "stop": "2026-06-03T15:30:00.000Z"
+        "title": "Exorcist II: The Heretic",
+        "desc": "A wavering priest travels to Africa to speak with a victim who survived demonic possession as a child in the hopes of learning the mystery behind why a demon driven from a little girl four years befor",
+        "start": "2026-06-03T15:30:00.000Z",
+        "stop": "2026-06-03T18:30:00.000Z"
       },
       {
         "title": "Exorcist II: The Heretic",
