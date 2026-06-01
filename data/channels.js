@@ -21,6 +21,8 @@ export const GROUPS = [
     channels: [
       { id: 'bbc-one',     name: 'BBC One',     color: '#d4001f', epgId: 'BBCOne.uk' },
       { id: 'bbc-two',     name: 'BBC Two',     color: '#0a3d62', epgId: 'BBCTwo.uk' },
+      { id: 'bbc-three',   name: 'BBC Three',   color: '#ff4081', epgId: 'BBCThree.uk' },
+      { id: 'bbc-four',    name: 'BBC Four',    color: '#00838f', epgId: 'BBCFour.uk' },
       { id: 'bbc-news',    name: 'BBC News 24', color: '#bb1919', epgId: 'BBCNews.uk' },
       { id: 'itv',         name: 'ITV',         color: '#e7af00', epgId: 'ITV1.uk' },
       { id: 'itv4',        name: 'ITV4',        color: '#1b9e4b', epgId: 'ITV4.uk' },
